@@ -50,7 +50,7 @@ const getUserWithId = function (id) {
       return result.rows[0];
     })
     .catch((err) => {
-      console.log(err);
+      console.log(err.message);
     });
 };
 
@@ -75,7 +75,7 @@ const addUser = function (user) {
       return result.rows[0];
     })
     .catch((err) => {
-      console.log(err);
+      console.log(err.message);
     });
 };
 
@@ -87,7 +87,27 @@ const addUser = function (user) {
  * @return {Promise<[{}]>} A promise to the reservations.
  */
 const getAllReservations = function (guest_id, limit = 10) {
-  return getAllProperties(null, 2);
+  const queryString = `SELECT properties.*, reservations.*, AVG(rating) as average_rating
+  FROM properties
+  JOIN reservations ON properties.id = reservations.property_id
+  JOIN property_reviews ON properties.id = property_reviews.property_id
+  WHERE reservations.guest_id = $1
+  GROUP BY properties.id, reservations.id
+  ORDER BY reservations.start_date
+  LIMIT $2;
+  `;
+  const value1 = guest_id;
+  const value2 = limit;
+  const values = [value1, value2];
+
+  return pool.query(queryString, values)
+    .then((result) => {
+      return result.rows;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  // return getAllProperties(null, 2);
 };
 
 /// Properties
