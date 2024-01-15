@@ -3,11 +3,15 @@
 const { Pool } = require('pg');
 const { query } = require("express");
 
+const path = require('path');
+const PATH = path.resolve(__dirname, '../.env.development');
+require("dotenv").config({path: PATH});
+
 const pool = new Pool({
-  user: 'vagrant',
-  password: '123',
-  host: 'localhost',
-  database: 'lightbnb'
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  host: process.env.HOST,
+  database: process.env.DATABASE
 });
 
 /// Users
