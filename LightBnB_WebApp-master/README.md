@@ -1,42 +1,55 @@
-# LightBnb
-- LightBnb is a simple multi-page Airbnb clone that uses server-side Javascript to display the information from queries to web pages via SQL queries
+# LightBnB
 
-- This project focuses on designing a robust database, the LightBnb database has been meticulously designed with normalization in mind, ensuring efficient storage and retrieval of data. The database is responsible for storing property details, user information, reservations, and reviews.
+## Project Structure
 
-## Features
+```
+.
+├── db
+│   ├── json
+│   └── database.js
+├── public
+│   ├── javascript
+│   │   ├── components 
+│   │   │   ├── header.js
+│   │   │   ├── login_form.js
+│   │   │   ├── new_property_form.js
+│   │   │   ├── property_listing.js
+│   │   │   ├── property_listings.js
+│   │   │   ├── search_form.js
+│   │   │   └── signup_form.js
+│   │   ├── libraries
+│   │   ├── index.js
+│   │   ├── network.js
+│   │   └── views_manager.js
+│   ├── styles
+│   │   ├── main.css
+│   │   └── main.css.map
+│   └── index.html
+├── routes
+│   ├── apiRoutes.js
+│   └── userRoutes.js
+├── styles  
+│   ├── _forms.scss
+│   ├── _header.scss
+│   ├── _property-listings.scss
+│   └── main.scss
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── README.md
+└── server.js
+```
 
-### 1. Create Listings
-- Easily create and showcase your property listings to potential guests.
-
-
-### 2. View Reservations
-- Access a overview of your reservations, allowing you to  keep track of upcoming stays and past reservations with ease.
-
-### 3. Property Ratings
-- Users can explore and view ratings for each property on LighthouseBnB. Gain insights into the community's feedback
-
-### 4. Advanced Search
-- Refine your property search with precision using our advanced search filters. Set minimum and maximum cost limits, filter by minimum ratings, and specify the city to discover the perfect accommodations.
-
-### 5. User Authentication
-- Create a secure account, log in, and enjoy personalized experiences on LighthouseBnB. Log out when you're done to ensure the security of your account.
-
-## Final Product
-![Alt text](url)
-
-## Getting Started
-1. Clone the repository: git clone https://github.com/laucodx45/LightBnB.git
-2. Navigate to the project directory: `cd LighthouseBnB/LightBnB_WebApp-master`
-3. Install dependencies `npm install`
-4. Create a `.env` file in the root directory and add your database connection details:
-
-   ```env
-   USER=your_database_user
-   PASSWORD=your_database_password
-   HOST=your_database_host
-   DATABASE=your_database_name
-5. Open database.js in and change the following line to point to your .env file
-```const PATH = path.resolve(__dirname, '../.env');```
-6. Run SQL queries from migration schema files and seeds files to create tables and seed data into your local database
-7. `npm run local` to start the server
-8. Visit the site `http://localhost:3000/`on your browser
+* `db` contains all the database interaction code.
+  * `json` is a directory that contains a bunch of dummy data in `.json` files.
+  * `database.js` is responsible for all queries to the database. It doesn't currently connect to any database, all it does is return data from `.json` files.
+* `public` contains all of the HTML, CSS, and client side JavaScript. 
+  * `index.html` is the entry point to the application. It's the only html page because this is a single page application.
+  * `javascript` contains all of the client side javascript files.
+    * `index.js` starts up the application by rendering the listings.
+    * `network.js` manages all ajax requests to the server.
+    * `views_manager.js` manages which components appear on screen.
+    * `components` contains all of the individual html components. They are all created using jQuery.
+* `routes` contains the router files which are responsible for any HTTP requests to `/users/something` or `/api/something`. 
+* `styles` contains all of the sass files. 
+* `server.js` is the entry point to the application. This connects the routes to the database.
