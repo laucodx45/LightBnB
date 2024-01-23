@@ -3,7 +3,26 @@
 
 - This project focuses on designing a robust database, the LightBnb database has been meticulously designed with normalization in mind, ensuring efficient storage and retrieval of data. The database is responsible for storing property details, user information, reservations, and reviews.
 
-##
+## Features
+
+### 1. Create Listings
+- Easily create and showcase your property listings to potential guests.
+
+
+### 2. View Reservations
+- Access a overview of your reservations, allowing you to  keep track of upcoming stays and past reservations with ease.
+
+### 3. Property Ratings
+- Users can explore and view ratings for each property on LighthouseBnB. Gain insights into the community's feedback
+
+### 4. Advanced Search
+- Refine your property search with precision using our advanced search filters. Set minimum and maximum cost limits, filter by minimum ratings, and specify the city to discover the perfect accommodations.
+
+### 5. User Authentication
+- Create a secure account, log in, and enjoy personalized experiences on LighthouseBnB. Log out when you're done to ensure the security of your account.
+
+## Final Product
+![Alt text](url)
 
 ## Getting Started
 1. Clone the repository: git clone https://github.com/laucodx45/LightBnB.git
