@@ -1,7 +1,7 @@
 # LightBnb
 - LightBnb is a simple multi-page Airbnb clone that uses server-side Javascript to display the information from queries to web pages via SQL queries
 
-- This project focuses on designing a robust database, the LightBnb database has been meticulously designed with normalization in mind, ensuring efficient storage and retrieval of data. The database is responsible for storing property details, user information, reservations, and reviews.
+- This project focuses on designing a robust relational database, the LightBnb database has been meticulously designed with normalization in mind, ensuring efficient storage and retrieval of data. The database is responsible for storing property details, user information, reservations, and reviews.
 
 ## Features
 
@@ -10,10 +10,10 @@
 
 
 ### 2. View Reservations
-- Access a overview of your reservations, allowing you to  keep track of upcoming stays and past reservations with ease.
+- Access a overview of your reservations, allowing you to keep track of upcoming stays and past reservations with ease.
 
 ### 3. Property Ratings
-- Users can explore and view ratings for each property on LighthouseBnB. Gain insights into the community's feedback
+- Users can explore and view ratings for each property on LighthouseBnB.
 
 ### 4. Advanced Search
 - Refine your property search with precision using our advanced search filters. Set minimum and maximum cost limits, filter by minimum ratings, and specify the city to discover the perfect accommodations.
