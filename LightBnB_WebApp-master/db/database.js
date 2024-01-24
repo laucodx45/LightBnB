@@ -1,5 +1,3 @@
-// const properties = require("./json/properties.json");
-// const users = require("./json/users.json");
 const { Pool } = require('pg');
 const { query } = require("express");
 
@@ -121,16 +119,8 @@ const getAllReservations = function(guest_id, limit = 10) {
  * @param {*} limit The number of results to return.
  * @return {Promise<[{}]>}  A promise to the properties.
  */
-const getAllProperties = function (options, limit = 10) {
-  /*
-  options {
-    city,
-    owner_id,
-    minimum_price_per_night,
-    maximum_price_per_night,
-    minimum_rating;
-  }
-  */
+const getAllProperties = function(options, limit = 10) {
+
   const queryParams = [];
 
   let queryString = `
@@ -143,7 +133,7 @@ const getAllProperties = function (options, limit = 10) {
   if (options.city) {
     const trimmedCity = options.city.slice(1, options.city.length - 1);
     queryParams.push(`%${trimmedCity}%`);
-    // $placeholder does not start at 0, it starts at $1
+    
     queryString += `AND properties.city LIKE $${queryParams.length}`;
   }
 
@@ -196,24 +186,7 @@ const getAllProperties = function (options, limit = 10) {
  * @return {Promise<{}>} A promise to the property.
  */
 const addProperty = function(property) {
-  /*
-  property{
-    owner_id: int,
-    title: string,
-    description: string,
-    thumbnail_photo_url: string,
-    cover_photo_url: string,
-    cost_per_night: string,
-    street: string,
-    city: string,
-    province: string,
-    post_code: string,
-    country: string,
-    parking_spaces: int,
-    number_of_bathrooms: int,
-    number_of_bedrooms: int
-  }
-  */
+  
   const queryString = `
   INSERT INTO properties (
     title, description, owner_id, cover_photo_url, thumbnail_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, active, province, city, country, street, post_code) 
