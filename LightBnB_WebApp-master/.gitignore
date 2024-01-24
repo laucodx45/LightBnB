@@ -88,4 +88,4 @@ typings/
 .dynamodb/
 
 # .env
-.env
+.env.development

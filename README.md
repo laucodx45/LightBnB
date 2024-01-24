@@ -31,15 +31,15 @@
 1. Clone the repository: git clone https://github.com/laucodx45/LightBnB.git
 2. Navigate to the project directory: `cd LighthouseBnB/LightBnB_WebApp-master`
 3. Install dependencies `npm install`
-4. Create a `.env` file in the root directory and add your database connection details:
+4. Open `.env.example` and add your database connection details:
 
    ```env
    USER=your_database_user
    PASSWORD=your_database_password
    HOST=your_database_host
    DATABASE=your_database_name
-5. Open database.js in and change the following line to point to your .env file
-```const PATH = path.resolve(__dirname, '../.env');```
+5. Open database.js in and change the following line to point to your .env.example file
+```const PATH = path.resolve(__dirname, '../.env.example');```
 6. Run SQL queries from migration schema files and seeds files to create tables and seed data into your local database
 7. `npm run local` to start the server
 8. Visit the site `http://localhost:3000/`on your browser
