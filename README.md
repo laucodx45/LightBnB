@@ -22,10 +22,10 @@
 - Create a secure account, log in, and enjoy personalized experiences on LighthouseBnB. Log out when you're done to ensure the security of your account.
 
 ## Final Product
-![screenshot of the search bar](./img/searchbar.png)
-![screenshot of the search result](./img/searchResult.png)
-<img src="./img/createListing.png" alt="create listing screenshot" width="400" />
-![screenshot of the new listing that user just created](./img/myListing.png)
+![screenshot of the search bar](https://github.com/laucodx45/LightBnB/raw/master/img/searchbar.png)
+![screenshot of the search result](https://github.com/laucodx45/LightBnB/raw/master/img/searchResult.png)
+<img src="https://github.com/laucodx45/LightBnB/raw/master/img/createListing.png" alt="create listing screenshot" width="400" />
+![screenshot of the new listing that user just created](https://github.com/laucodx45/LightBnB/raw/master/img/myListing.png)
 
 ## Getting Started
 1. Clone the repository: git clone https://github.com/laucodx45/LightBnB.git
