@@ -1,4 +1,4 @@
-# LightBnb
+# LightBnB
 - LightBnb is a simple multi-page Airbnb clone that uses server-side Javascript to display the information from queries to web pages via SQL queries
 
 - This project focuses on designing a robust relational database, the LightBnb database has been meticulously designed with normalization in mind, ensuring efficient storage and retrieval of data. The database is responsible for storing property details, user information, reservations, and reviews.
